@@ -20,10 +20,22 @@ Features
 * Support for parsing Blogger XML exports
 * Support for parsing blogs, authors, posts and comments
 
+Downloads
+---------
+
+You may download the builds from Maven Central repository using:
+
+```xml
+<dependency>
+    <groupId>com.sangupta</groupId>
+    <artifactId>blog-parser</artifactId>
+    <version>0.9.0</version>
+</dependency>
+```
+
 Dependencies
 ------------
-
-The library depends on the following third-party libraries:
+The library is built using Oracle Java 1.6 and depends on the following open-source third-party libraries:
 * [Rome RSS parsing library](https://rometools.jira.com/wiki/display/ROME/Home)
 
 Versioning

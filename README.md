@@ -5,7 +5,7 @@
 Usage
 -----
 
-Initialize the right parser for your blog export, like
+Initialize the right parser for your blog export and pass it the file contents of the export, like
 
 ```java
 File file = new File("blogger-export.xml");
@@ -13,6 +13,8 @@ String xml = org.apache.commons.io.FileUtils.readFileToString(file);
 BloggerParser parser = new BloggerParser();
 Blog blog = parser.parse(xml);
 ```
+
+and you are done! The `Blog` object represents the parsed entities.
 
 Features
 --------

@@ -1,6 +1,6 @@
 **blog-parser** is a Java library to parse blog exports into strongly-typed data object model. This is particularly useful when you want to allow your application to import data from existing blogs.
 
-**Current Version: 0.9.0**
+**Current Version: 0.9.5**
 
 Usage
 -----
@@ -18,7 +18,10 @@ and you are done! The `Blog` object represents the parsed entities.
 
 Features
 --------
+**0.9.5**
+* Added support for blog pages
 
+**0.9.0**
 * Support for parsing Blogger XML exports
 * Support for parsing blogs, authors, posts and comments
 

@@ -53,6 +53,11 @@ public class Blog {
 	private List<Author> authors;
 	
 	/**
+	 * All pages available in this blog
+	 */
+	private List<BlogPage> pages;
+	
+	/**
 	 * Add an author to this blog
 	 * 
 	 * @param author
@@ -76,6 +81,19 @@ public class Blog {
 		}
 		
 		this.posts.add(post);
+	}
+	
+	/**
+	 * Add a page to this blog
+	 * 
+	 * @param page
+	 */
+	public void addPage(BlogPage page) {
+		if(this.pages == null) {
+			this.pages = new ArrayList<BlogPage>();			
+		}
+		
+		this.pages.add(page);
 	}
 	
 	@Override
@@ -158,6 +176,20 @@ public class Blog {
 	 */
 	public void setAuthors(List<Author> authors) {
 		this.authors = authors;
+	}
+
+	/**
+	 * @return the pages
+	 */
+	public List<BlogPage> getPages() {
+		return pages;
+	}
+
+	/**
+	 * @param pages the pages to set
+	 */
+	public void setPages(List<BlogPage> pages) {
+		this.pages = pages;
 	}
 
 }

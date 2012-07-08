@@ -31,6 +31,7 @@ import org.jdom.Element;
 import com.sangupta.blogparser.Parser;
 import com.sangupta.blogparser.domain.Author;
 import com.sangupta.blogparser.domain.Blog;
+import com.sangupta.blogparser.domain.BlogPage;
 import com.sangupta.blogparser.domain.BlogPost;
 import com.sangupta.blogparser.domain.PostComment;
 import com.sun.syndication.feed.synd.SyndCategoryImpl;
@@ -90,6 +91,7 @@ public class BloggerParser implements Parser {
 				// do as a proper post
 				BlogPost post = convertToBlogPost(entry);
 				blog.addPost(post);
+				continue;
 			}
 			
 			// comment
@@ -99,14 +101,54 @@ public class BloggerParser implements Parser {
 				if(post != null) {
 					post.addComment(comment);
 				}
+				continue;
+			}
+			
+			// page
+			if(category.getTaxonomyUri().equals("http://schemas.google.com/g/2005#kind") && category.getName().equals("http://schemas.google.com/blogger/2008/kind#page")) {
+				// do as a proper post
+				BlogPage page = convertToBlogPage(entry);
+				blog.addPage(page);
+				continue;
 			}
 		}
 		
-		System.out.println(feed);
-		
-		return null;
+		return blog;
 	}
 	
+	/**
+	 * Convert the syndicated feed entry to the {@link BlogPage} object.
+	 * 
+	 * @param entry
+	 * @return
+	 */
+	private BlogPage convertToBlogPage(SyndEntryImpl entry) {
+		BlogPage page = new BlogPage();
+		
+		page.setContent(((SyndContentImpl) entry.getContents().get(0)).getValue());
+		page.setPublishedOn(entry.getPublishedDate());
+		page.setUrl(entry.getLink());
+		page.setTitle(entry.getTitleEx().getValue());
+		
+		// extract the author
+		SyndPersonImpl blogAuthor = ((SyndPersonImpl) entry.getAuthors().get(0));
+		Author author = new Author();
+		author.setName(blogAuthor.getName());
+		author.setEmail(blogAuthor.getEmail());
+		author.setProfileUrl(blogAuthor.getUri());
+		
+		page.setAuthor(author);
+		
+		return page;
+
+	}
+
+	/**
+	 * Convert the syndicated feed entry to the {@link BlogPost} object.
+	 * 
+	 * @param entry
+	 * @return
+	 */
 	private BlogPost convertToBlogPost(SyndEntryImpl entry) {
 		BlogPost post = new BlogPost();
 		
@@ -135,6 +177,12 @@ public class BloggerParser implements Parser {
 		return post;
 	}
 
+	/**
+	 * Convert the syndicated feed entry to the {@link PostComment} object.
+	 * 
+	 * @param entry
+	 * @return
+	 */
 	private PostComment convertToPostComment(SyndEntryImpl entry) {
 		PostComment comment = new PostComment();
 		

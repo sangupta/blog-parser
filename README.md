@@ -25,6 +25,13 @@ Features
 * Support for parsing Blogger XML exports
 * Support for parsing blogs, authors, posts and comments
 
+Continuous Integration
+----------------------
+
+The library is continuously integrated and unit tested using the **Travis CI* system.
+
+Current status of branch MASTER: [![Build Status](https://secure.travis-ci.org/sangupta/blog-parser.png?branch=master)](http://travis-ci.org/sangupta/blog-parser)
+
 Downloads
 ---------
 

@@ -45,6 +45,22 @@ public class Author {
 	 */
 	private String profileUrl;
 	
+	/**
+	 * Default constructor
+	 */
+	public Author() {
+		
+	}
+	
+	/**
+	 * Convenience constructor
+	 * 
+	 * @param name
+	 */
+	public Author(String name) {
+		this.name = name;
+	}
+	
 	@Override
 	public String toString() {
 		return "[Author: " + this.name + "]";

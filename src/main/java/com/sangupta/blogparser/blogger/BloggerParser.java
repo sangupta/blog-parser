@@ -113,6 +113,7 @@ public class BloggerParser implements Parser {
 				// do as a proper post
 				BlogPost post = convertToBlogPost(entry);
 				blog.addPost(post);
+				posts.put(post.getUrl(), post);
 				continue;
 			}
 			

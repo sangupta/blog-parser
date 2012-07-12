@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet href="http://www.blogger.com/styles/atom.css" type="text/css"?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/'
+	xmlns:georss='http://www.georss.org/georss' xmlns:gd='http://schemas.google.com/g/2005'
+	xmlns:thr='http://purl.org/syndication/thread/1.0'>
+	<id>tag:blogger.com,1999:blog-2283285346334834437.archive</id>
+	<updated>2012-07-08T10:04:35.205+05:30</updated>
+	<category term='Friends' />
+	<category term='Gathered from Net' />
+	<category term='Poems by Sunil' />
+	<category term='Lord Krishna' />
+	<category term='My Poems' />
+	<category term='JRR Tolkein' />
+	<title type='text'>Poet Inside</title>
+	<link rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml'
+		href='http://www.poetinside.com/feeds/archive' />
+	<link rel='self' type='application/atom+xml' href='http://www.poetinside.com/feeds/archive' />
+	<link rel='http://schemas.google.com/g/2005#post' type='application/atom+xml'
+		href='http://www.blogger.com/feeds/2283285346334834437/archive' />
+	<link rel='alternate' type='text/html' href='http://www.poetinside.com/' />
+	<author>
+		<name>Sandeep Gupta</name>
+		<uri>https://profiles.google.com/110645714607919970386</uri>
+		<email>noreply@blogger.com</email>
+	</author>
+
+	<generator version='7.00' uri='http://www.blogger.com'>Blogger</generator>
+
+	<entry>
+		<id>tag:blogger.com,1999:blog-2283285346334834437.settings.BLOG_DESCRIPTION</id>
+		<published>2007-06-25T00:12:26.034+05:30</published>
+		<updated>2012-07-08T10:04:35.205+05:30</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/blogger/2008/kind#settings' />
+		<title type='text'>A description of the blog</title>
+		<content type='text'>&lt;small&gt;The music of language, intricate
+			rhyme schemes, elegant phrases, vivid images - the art of poetry is
+			enough to inspire many to write it. Poetry is the practice of
+			creating artworks using language. What could be a better way than
+			discovering the music inside yourself than Poetry? Words are the soul
+			of any rythm, any sort of music.&lt;/small&gt;</content>
+		<link rel='edit' type='application/atom+xml'
+			href='http://www.blogger.com/feeds/2283285346334834437/settings/BLOG_DESCRIPTION' />
+		<link rel='self' type='application/atom+xml'
+			href='http://www.blogger.com/feeds/2283285346334834437/settings/BLOG_DESCRIPTION' />
+		<author>
+			<name>Sandeep Gupta</name>
+			<uri>https://profiles.google.com/110645714607919970386</uri>
+			<email>noreply@blogger.com</email>
+		</author>
+	</entry>
+	
+	<entry>
+		<id>tag:blogger.com,1999:blog-2283285346334834437.post-4980612023114433366
+		</id>
+		<published>2007-06-25T09:55:00.001+05:30</published>
+		<updated>2008-04-14T22:15:10.324+05:30</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/blogger/2008/kind#post' />
+		<category scheme='http://www.blogger.com/atom/ns#' term='My Poems' />
+		<title type='text'>A MAN IS BORN!</title>
+		<content type='html'>man is born poem!</content>
+		<link rel='edit' type='application/atom+xml'
+			href='http://www.blogger.com/feeds/2283285346334834437/posts/default/4980612023114433366' />
+		<link rel='self' type='application/atom+xml'
+			href='http://www.blogger.com/feeds/2283285346334834437/posts/default/4980612023114433366' />
+		<link rel='alternate' type='text/html'
+			href='http://www.poetinside.com/2007/06/man-is-born.html' title='A MAN IS BORN!' />
+		<author>
+			<name>Sandeep Gupta</name>
+			<uri>https://profiles.google.com/110645714607919970386</uri>
+			<email>noreply@blogger.com</email>
+		</author>
+	</entry>
+	
+	<entry>
+		<id>tag:blogger.com,1999:blog-2283285346334834437.page-1207997739015507984</id>
+		<published>2012-07-08T10:04:00.001+05:30</published>
+		<updated>2012-07-08T10:04:35.229+05:30</updated>
+		<app:control xmlns:app='http://purl.org/atom/app#'>
+			<app:draft>yes</app:draft>
+		</app:control>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/blogger/2008/kind#page' />
+		<title type='text'>About Me</title>
+		<content type='html'>This is a test page for about me.</content>
+		<link rel='edit' type='application/atom+xml'
+			href='http://www.blogger.com/feeds/2283285346334834437/pages/default/1207997739015507984' />
+		<link rel='self' type='application/atom+xml'
+			href='http://www.blogger.com/feeds/2283285346334834437/pages/default/1207997739015507984' />
+		<author>
+			<name>Sandeep Gupta</name>
+			<uri>https://profiles.google.com/110645714607919970386</uri>
+			<email>noreply@blogger.com</email>
+		</author>
+	</entry>
+	<entry>
+		<id>tag:blogger.com,1999:blog-2283285346334834437.post-5668650518194610508</id>
+		<published>2007-06-25T15:44:00.000+05:30</published>
+		<updated>2007-06-25T15:44:18.904+05:30</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/blogger/2008/kind#comment' />
+		<title type='text'>Too good :)</title>
+		<content type='html'>Too good :)</content>
+		<link rel='edit' type='application/atom+xml'
+			href='http://www.blogger.com/feeds/2283285346334834437/4980612023114433366/comments/default/5668650518194610508' />
+		<link rel='self' type='application/atom+xml'
+			href='http://www.blogger.com/feeds/2283285346334834437/4980612023114433366/comments/default/5668650518194610508' />
+		<link rel='alternate' type='text/html'
+			href='http://www.poetinside.com/2007/06/man-is-born.html?showComment=1182766440000#c5668650518194610508'
+			title='' />
+		<author>
+			<name>MyFriend-1</name>
+			<uri>http://www.blogger.com/profile/45263475234685623465</uri>
+			<email>noreply@blogger.com</email>
+		</author>
+		<thr:in-reply-to href='http://www.poetinside.com/2007/06/man-is-born.html'
+			ref='tag:blogger.com,1999:blog-2283285346334834437.post-4980612023114433366'
+			source='http://www.blogger.com/feeds/2283285346334834437/posts/default/4980612023114433366'
+			type='text/html' />
+	</entry>
+	
+</feed>

@@ -21,10 +21,8 @@
 
 package com.sangupta.blogparser.wordpress;
 
-import java.io.File;
+import java.io.Reader;
 import java.io.StringReader;
-
-import org.apache.commons.io.FileUtils;
 
 import com.sangupta.blogparser.Parser;
 import com.sangupta.blogparser.domain.Author;
@@ -45,11 +43,28 @@ import com.sun.syndication.io.SyndFeedInput;
  */
 public class WordpressParser implements Parser {
 
-	@Override
+	/**
+	 * Parse the XML feed and return the {@link Blog} object.
+	 */
 	public Blog parse(String blogData) {
+		return parse(new StringReader(blogData));
+	}
+	
+	/**
+	 * Parse the feed from the given reader and return the {@link Blog} object.
+	 * 
+	 * @param reader the reader to use for reading contents of the blog export
+	 * 
+	 * @throws IllegalArgumentException if the reader supplied is <code>null</code>
+	 */
+	public Blog parse(Reader reader) {
+		if(reader == null) {
+			throw new IllegalArgumentException("Reader cannot be null.");
+		}
+		
 		SyndFeed feed = null;
 		try {
-			feed = new SyndFeedInput().build(new StringReader(blogData));
+			feed = new SyndFeedInput().build(reader);
 		} catch (IllegalArgumentException e) {
 			throw new RuntimeException("Illegal arguments when parsing feed", e);
 		} catch (FeedException e) {

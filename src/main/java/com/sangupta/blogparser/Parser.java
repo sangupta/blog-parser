@@ -21,6 +21,8 @@
 
 package com.sangupta.blogparser;
 
+import java.io.Reader;
+
 import com.sangupta.blogparser.domain.Blog;
 
 /**
@@ -41,5 +43,13 @@ public interface Parser {
 	 * @throws NullPointerException if blogData is <code>null</code>
 	 */
 	public Blog parse(String blogData);
+	
+	/**
+	 * Parse a blog reading data from the given reader.
+	 * 
+	 * @param reader
+	 * @return
+	 */
+	public Blog parse(Reader reader);
 
 }

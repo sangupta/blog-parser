@@ -25,8 +25,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
+import org.junit.Before;
+import org.junit.Test;
+
 import com.sangupta.blogparser.blogger.BloggerParser;
+import com.sangupta.blogparser.domain.Author;
 import com.sangupta.blogparser.domain.Blog;
+import static org.junit.Assert.*;
 
 /**
  * Simple class to test the blogger parser
@@ -35,9 +40,12 @@ import com.sangupta.blogparser.domain.Blog;
  *
  */
 public class BloggerParserTest {
+	
+	private Blog blog = null;
 
-	public static void main(String[] args) throws Exception {
-		File file = new File("c:\\users\\sangupta\\desktop\\blog-07-07-2012.xml");
+	@Before
+	public void setupBlog() throws Exception {
+		File file = new File("./samples/blogger-poetinside.xml");
 		FileReader reader = new FileReader(file);
 		BufferedReader br = new BufferedReader(reader);
 		String line;
@@ -48,8 +56,39 @@ public class BloggerParserTest {
 		}
 		
 		BloggerParser parser = new BloggerParser();
-		Blog blog = parser.parse(builder.toString());
-		
-		System.out.println(blog);
+		blog = parser.parse(builder.toString());
 	}
+	
+	@Test
+	public void testBlogBasics() {
+		assertNotNull(blog);
+		assertEquals("blog title", "Poet Inside", blog.getTitle());
+		assertEquals("blog url", "http://www.poetinside.com/", blog.getUrl());
+		assertNotNull(blog.getPosts());
+		assertEquals("num posts", 152, blog.getPosts().size());
+		assertNotNull(blog.getPages());
+		assertEquals("num pages", 1, blog.getPages().size());
+	}
+	
+	@Test
+	public void testAuthors() {
+		assertNotNull(blog.getAuthors());
+		assertEquals("num authors", 1, blog.getAuthors().size());
+
+		Author author = blog.getAuthors().get(0);
+		assertEquals("author email", "noreply@blogger.com", author.getEmail());
+		assertEquals("author name", "Sandeep Gupta", author.getName());
+		assertEquals("author profile", "https://profiles.google.com/110645714607919970386", author.getProfileUrl());
+	}
+	
+	@Test
+	public void testPages() {
+		
+	}
+	
+	@Test
+	public void testPosts() {
+		
+	}
+	
 }

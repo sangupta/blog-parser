@@ -1,7 +1,5 @@
 **blog-parser** is a Java library to parse blog exports into strongly-typed data object model. This is particularly useful when you want to allow your application to import data from existing blogs.
 
-**Current Version: 0.9.5**
-
 Usage
 -----
 
@@ -18,6 +16,11 @@ and you are done! The `Blog` object represents the parsed entities.
 
 Features
 --------
+**0.9.6 (in development)**
+* Added support for Wordpress and Movable Type platforms
+* Added support for blog description
+* Added unit tests
+
 **0.9.5**
 * Added support for blog pages
 
@@ -31,6 +34,13 @@ Continuous Integration
 The library is continuously integrated and unit tested using the **Travis CI* system.
 
 Current status of branch MASTER: [![Build Status](https://secure.travis-ci.org/sangupta/blog-parser.png?branch=master)](http://travis-ci.org/sangupta/blog-parser)
+
+The library is tested against
+
+* Oracle JDK 7
+* Oracle JDK 6
+* Open JDK 7
+* Open JDK 6
 
 Downloads
 ---------

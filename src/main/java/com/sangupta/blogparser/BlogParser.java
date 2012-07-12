@@ -23,6 +23,7 @@ package com.sangupta.blogparser;
 
 import com.sangupta.blogparser.blogger.BloggerParser;
 import com.sangupta.blogparser.domain.Blog;
+import com.sangupta.blogparser.movabletype.MovableTypeParser;
 import com.sangupta.blogparser.wordpress.WordpressParser;
 
 /**
@@ -53,6 +54,10 @@ public class BlogParser {
 				
 			case Wordpress:
 				parser = new WordpressParser();
+				break;
+				
+			case MovableType:
+				parser = new MovableTypeParser();
 				break;
 		}
 		

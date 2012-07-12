@@ -101,8 +101,14 @@ public class BloggerParser implements Parser {
 		for(Object obj : feed.getEntries()) {
 			SyndEntryImpl entry = (SyndEntryImpl) obj;
 			
-			// post
 			SyndCategoryImpl category = (SyndCategoryImpl) entry.getCategories().get(0);
+
+			// blog description
+			if(entry.getUri().endsWith(".settings.BLOG_DESCRIPTION") && category.getTaxonomyUri().equals("http://schemas.google.com/g/2005#kind") && category.getName().equals("http://schemas.google.com/blogger/2008/kind#settings")) {
+				blog.setDescription(((SyndContentImpl) entry.getContents().get(0)).getValue());
+			}
+			
+			// post
 			if(category.getTaxonomyUri().equals("http://schemas.google.com/g/2005#kind") && category.getName().equals("http://schemas.google.com/blogger/2008/kind#post")) {
 				// do as a proper post
 				BlogPost post = convertToBlogPost(entry);

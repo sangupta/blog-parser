@@ -38,6 +38,11 @@ public class Blog {
 	private String title;
 	
 	/**
+	 * Description of the blog, if provided
+	 */
+	private String description;
+	
+	/**
 	 * Absolute URL of the blog
 	 */
 	private String url;
@@ -190,6 +195,20 @@ public class Blog {
 	 */
 	public void setPages(List<BlogPage> pages) {
 		this.pages = pages;
+	}
+
+	/**
+	 * @return the description
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * @param description the description to set
+	 */
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }

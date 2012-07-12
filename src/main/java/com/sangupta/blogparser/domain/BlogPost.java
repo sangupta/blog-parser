@@ -70,6 +70,11 @@ public class BlogPost {
 	private List<String> tags;
 	
 	/**
+	 * Categories applied to this post
+	 */
+	private List<String> categories;
+	
+	/**
 	 * Add a comment to this post
 	 * 
 	 * @param comment
@@ -93,6 +98,19 @@ public class BlogPost {
 		}
 		
 		this.tags.add(tag);
+	}
+
+	/**
+	 * Add a category to this post
+	 * 
+	 * @param category
+	 */
+	public void addCategory(String category) {
+		if(this.categories == null) {
+			this.categories = new ArrayList<String>();
+		}
+		
+		this.categories.add(category);
 	}
 	
 	@Override
@@ -203,6 +221,20 @@ public class BlogPost {
 	 */
 	public void setComments(List<PostComment> comments) {
 		this.comments = comments;
+	}
+
+	/**
+	 * @return the tags
+	 */
+	public List<String> getTags() {
+		return tags;
+	}
+
+	/**
+	 * @return the categories
+	 */
+	public List<String> getCategories() {
+		return categories;
 	}
 	
 }

@@ -10,7 +10,7 @@
 
 	<groupId>com.sangupta</groupId>
 	<artifactId>blog-parser</artifactId>
-	<version>0.9.6-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>blog-parser</name>

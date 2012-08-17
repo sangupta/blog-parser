@@ -2,7 +2,6 @@
 
 Usage
 -----
-
 Initialize the right parser for your blog export and pass it the file contents of the export, like
 
 ```java
@@ -12,13 +11,22 @@ BloggerParser parser = new BloggerParser();
 Blog blog = parser.parse(xml);
 ```
 
+or, you may use the utility class `BlogParser` as:
+
+```java
+File file = new File("wordpress-export.xml");
+String xml = org.apache.commons.io.FileUtils.readFileToString(file);
+Blog blog = BlogParser.parse(xml, BlogType.Wordpress);
+```
+
 and you are done! The `Blog` object represents the parsed entities.
 
 Features
 --------
-**0.9.6 (in development)**
+**1.0.0**
 * Added support for Wordpress and Movable Type platforms
 * Added support for blog description
+* Added a static utility class `BlogParser`
 * Added unit tests
 
 **0.9.5**
@@ -27,6 +35,15 @@ Features
 **0.9.0**
 * Support for parsing Blogger XML exports
 * Support for parsing blogs, authors, posts and comments
+
+Roadmap
+-------
+Add support for the following platforms:
+* Posterous
+* Live Journal
+* Tumblr
+* Blog.com
+* Typepad
 
 Continuous Integration
 ----------------------

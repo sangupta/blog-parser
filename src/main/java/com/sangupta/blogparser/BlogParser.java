@@ -46,7 +46,7 @@ public class BlogParser {
 			throw new IllegalArgumentException("Blog data cannot be null/empty.");
 		}
 		
-		Parser parser = null;
+		Parser parser;
 		switch(blogType) {
 			case Blogger:
 				parser = new BloggerParser();
@@ -59,12 +59,11 @@ public class BlogParser {
 			case MovableType:
 				parser = new MovableTypeParser();
 				break;
+
+			default:
+				throw new RuntimeException("Parser is not available for type: " + blogType);
 		}
 		
-		if(parser != null) {
-			return parser.parse(blogData);
-		}
-		
-		return null;
+		return parser.parse(blogData);
 	}
 }

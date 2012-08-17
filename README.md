@@ -24,21 +24,25 @@ and you are done! The `Blog` object represents the parsed entities.
 Features
 --------
 **1.0.0**
+
 * Added support for Wordpress and Movable Type platforms
 * Added support for blog description
 * Added a static utility class `BlogParser`
 * Added unit tests
 
 **0.9.5**
+
 * Added support for blog pages
 
 **0.9.0**
+
 * Support for parsing Blogger XML exports
 * Support for parsing blogs, authors, posts and comments
 
 Roadmap
 -------
 Add support for the following platforms:
+
 * Posterous
 * Live Journal
 * Tumblr
@@ -75,6 +79,7 @@ You may download the builds from Maven Central repository using:
 Dependencies
 ------------
 The library is built using Oracle Java 1.6 and depends on the following open-source third-party libraries:
+
 * [Rome RSS parsing library](https://rometools.jira.com/wiki/display/ROME/Home)
 
 Versioning
